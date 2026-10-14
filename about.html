@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--
+  HavenWood Furniture | Responsive Furniture Website (HTML + Tailwind CSS v4 via CDN)
+  Student: Mordecai
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | HavenWood Furniture</title>
+  <meta name="description" content="Learn about HavenWood Furniture, our mission, vision and values.">
+  <link rel="icon" href="images/logo.png">
+
+  <!-- Fonts: Fraunces (headings) and Source Sans 3 (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v4 browser CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Brand theme: custom colours and fonts taken from the HavenWood logo -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand-green: #0A3622;   /* logo: roof, chair, "Haven" */
+      --color-brand-wood: #8A5123;    /* logo: plant pot, "Wood" */
+      --color-brand-cream: #FDFBF9;   /* logo background */
+      --color-brand-sand: #F3ECE1;    /* soft section background */
+      --color-brand-ink: #1F2A24;     /* body text */
+      --color-brand-line: #E3DACB;    /* subtle borders */
+      --font-display: "Fraunces", Georgia, serif;
+      --font-sans: "Source Sans 3", system-ui, sans-serif;
+    }
+  </style>
+  <style>
+    /* Visible keyboard focus on every page */
+    :focus-visible { outline: 2px solid #8A5123; outline-offset: 2px; }
+  </style>
+</head>
+<body class="bg-brand-cream font-sans text-lg text-brand-ink antialiased">
+
+  <header class="sticky top-0 z-50 border-b border-brand-line bg-brand-cream">
+    <div class="mx-auto w-[90%] max-w-[1200px] flex items-center justify-between py-3">
+      <a href="index.html" class="shrink-0">
+        <img src="images/logo.png" alt="HavenWood Furniture - Better Spaces. Happier Lives." width="1254" height="876" class="h-16 w-auto sm:h-20">
+      </a>
+
+      <nav aria-label="Main navigation" class="hidden lg:block">
+        <ul class="flex items-center gap-8 text-base font-semibold">
+          <li><a href="index.html" class="pb-1 text-brand-green transition-colors hover:text-brand-wood">Home</a></li>
+          <li><a href="about.html" aria-current="page" class="border-b-2 border-brand-wood pb-1 text-brand-wood">About</a></li>
+          <li><a href="products.html" class="pb-1 text-brand-green transition-colors hover:text-brand-wood">Products</a></li>
+          <li><a href="categories.html" class="pb-1 text-brand-green transition-colors hover:text-brand-wood">Categories</a></li>
+          <li><a href="gallery.html" class="pb-1 text-brand-green transition-colors hover:text-brand-wood">Gallery</a></li>
+          <li><a href="contact.html" class="pb-1 text-brand-green transition-colors hover:text-brand-wood">Contact</a></li>
+          </ul>
+      </nav>
+
+      <a href="contact.html" class="hidden lg:inline-block rounded-md bg-brand-green px-6 py-3 text-base font-bold text-white transition-colors hover:bg-brand-wood">Get a quote</a>
+
+      <button id="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"
+              class="rounded-md border border-brand-line p-2 text-brand-green lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" aria-label="Mobile navigation" class="hidden border-t border-brand-line lg:hidden">
+      <ul class="mx-auto w-[90%] max-w-[1200px] py-2 text-base font-semibold">
+        <li><a href="index.html" class="block border-b border-brand-line py-3 text-brand-green hover:text-brand-wood">Home</a></li>
+        <li><a href="about.html" aria-current="page" class="block border-b border-brand-line py-3 text-brand-wood">About</a></li>
+        <li><a href="products.html" class="block border-b border-brand-line py-3 text-brand-green hover:text-brand-wood">Products</a></li>
+        <li><a href="categories.html" class="block border-b border-brand-line py-3 text-brand-green hover:text-brand-wood">Categories</a></li>
+        <li><a href="gallery.html" class="block border-b border-brand-line py-3 text-brand-green hover:text-brand-wood">Gallery</a></li>
+        <li><a href="contact.html" class="block border-b border-brand-line py-3 text-brand-green hover:text-brand-wood">Contact</a></li>
+        <li class="py-4"><a href="contact.html" class="block text-center rounded-md bg-brand-green px-6 py-3 text-base font-bold text-white transition-colors hover:bg-brand-wood">Get a quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="border-b border-brand-line bg-brand-sand">
+      <div class="mx-auto w-[90%] max-w-[1200px] py-14 md:py-20">
+        <h1 class="font-display text-4xl font-bold text-brand-green md:text-5xl">About HavenWood</h1>
+        <p class="mt-4 max-w-2xl text-lg text-gray-600">A Nairobi furniture business built on one idea: a better space makes for a happier life.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="mx-auto w-[90%] max-w-[1200px] grid items-center gap-10 py-16 md:py-24 lg:grid-cols-2 lg:gap-16">
+        <img src="images/Welcome section.jpg" alt="Inside the HavenWood showroom" width="1200" height="800" loading="lazy" class="h-auto w-full rounded-lg">
+        <div>
+          <h2 class="font-display text-3xl font-bold text-brand-green md:text-4xl">Our story</h2>
+          <p class="mt-6 text-gray-600">HavenWood began with a simple frustration: it was hard to find furniture that was both strong and fairly priced. Pieces were either flimsy and cheap, or well made and out of reach.</p>
+          <p class="mt-4 text-gray-600">So we set out to make furniture the way it should be made. We choose sturdy timber, keep the designs clean and comfortable, and build each piece to be used every day for many years.</p>
+          <p class="mt-4 text-gray-600">Our name says it all. A haven is a place where you feel safe and at ease, and wood is the material we trust to build it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-brand-line">
+      <div class="mx-auto w-[90%] max-w-[1200px] grid gap-12 py-16 md:grid-cols-2 md:gap-16 md:py-24">
+        <div>
+          <h2 class="font-display text-3xl font-bold text-brand-green">Our mission</h2>
+          <p class="mt-4 text-gray-600">To make strong, comfortable and fairly priced furniture that helps families and businesses create spaces they are proud of.</p>
+        </div>
+        <div>
+          <h2 class="font-display text-3xl font-bold text-brand-green">Our vision</h2>
+          <p class="mt-4 text-gray-600">To be the furniture brand Kenyans trust first when they want something well made, and to build better spaces and happier lives across East Africa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand-sand">
+      <div class="mx-auto w-[90%] max-w-[1200px] py-16 md:py-24">
+        <h2 class="font-display text-3xl font-bold text-brand-green md:text-4xl">What we value</h2>
+        <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="border-t-2 border-brand-wood pt-4">
+            <h3 class="font-display text-xl font-bold text-brand-green">Honest materials</h3>
+            <p class="mt-2 text-base text-gray-600">We use real hardwood and quality fabric, and we tell you exactly what each piece is made from.</p>
+          </div>
+          <div class="border-t-2 border-brand-wood pt-4">
+            <h3 class="font-display text-xl font-bold text-brand-green">Fair prices</h3>
+            <p class="mt-2 text-base text-gray-600">Good furniture should be within reach. We keep our designs simple so the money goes into the materials.</p>
+          </div>
+          <div class="border-t-2 border-brand-wood pt-4">
+            <h3 class="font-display text-xl font-bold text-brand-green">Careful craftsmanship</h3>
+            <p class="mt-2 text-base text-gray-600">Every piece is checked before it leaves the workshop, because small details decide how long furniture lasts.</p>
+          </div>
+          <div class="border-t-2 border-brand-wood pt-4">
+            <h3 class="font-display text-xl font-bold text-brand-green">Service after the sale</h3>
+            <p class="mt-2 text-base text-gray-600">We deliver, set up and stand behind what we sell. If something is wrong, we put it right.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand-sand">
+      <div class="mx-auto w-[90%] max-w-[1200px] flex flex-col items-start justify-between gap-6 py-14 md:flex-row md:items-center">
+        <div>
+          <h2 class="font-display text-3xl font-bold text-brand-green">See the furniture in person</h2>
+          <p class="mt-2 max-w-xl text-gray-600">Visit our showroom on Ngong Road, or send us a message and we will prepare a quote.</p>
+        </div>
+        <a href="contact.html" class="shrink-0 inline-block rounded-md bg-brand-green px-6 py-3 text-base font-bold text-white transition-colors hover:bg-brand-wood">Contact us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-brand-green text-base text-white/80">
+    <div class="mx-auto w-[90%] max-w-[1200px] grid gap-10 py-14 md:grid-cols-3">
+      <div>
+        <p class="font-display text-2xl font-bold text-white">HavenWood Furniture</p>
+        <p class="mt-2 text-white">Better Spaces. Happier Lives.</p>
+        <p class="mt-4 max-w-xs">Well-made furniture for living rooms, bedrooms, dining rooms and offices.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-lg font-bold text-white">Explore</h2>
+        <ul class="mt-4 space-y-2">
+          <li><a href="index.html" class="hover:text-white hover:underline">Home</a></li>
+          <li><a href="about.html" class="hover:text-white hover:underline">About</a></li>
+          <li><a href="products.html" class="hover:text-white hover:underline">Products</a></li>
+          <li><a href="categories.html" class="hover:text-white hover:underline">Categories</a></li>
+          <li><a href="gallery.html" class="hover:text-white hover:underline">Gallery</a></li>
+          <li><a href="contact.html" class="hover:text-white hover:underline">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="font-display text-lg font-bold text-white">Visit us</h2>
+        <address class="mt-4 space-y-2 not-italic">
+          <p>Ngong Road, Nairobi, Kenya</p>
+          <p><a href="tel:+254700000000" class="hover:text-white hover:underline">+254 700 000 000</a></p>
+          <p><a href="mailto:info@havenwood.co.ke" class="hover:text-white hover:underline">info@havenwood.co.ke</a></p>
+          <p>Mon - Sat: 8:30 am - 6:00 pm</p>
+        </address>
+      </div>
+    </div>
+    <div class="border-t border-white/15">
+      <p class="mx-auto w-[90%] max-w-[1200px] py-5 text-sm">&copy; 2026 HavenWood Furniture. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu: show or hide the menu when the button is clicked
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuButton.addEventListener("click", () => {
+      const isHidden = mobileMenu.classList.toggle("hidden");
+      menuButton.setAttribute("aria-expanded", String(!isHidden));
+      menuButton.setAttribute("aria-label", isHidden ? "Open menu" : "Close menu");
+    });
+  </script>
+</body>
+</html>

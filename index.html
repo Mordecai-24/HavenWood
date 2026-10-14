@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--
+  HavenWood Furniture | Responsive Furniture Website (HTML + Tailwind CSS v4 via CDN)
+  Student: Mordecai
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | HavenWood Furniture</title>
+  <meta name="description" content="HavenWood Furniture makes solid, well-made furniture for homes and offices in Nairobi, Kenya.">
+  <link rel="icon" href="images/logo.png">
+
+  <!-- Fonts: Fraunces (headings) and Source Sans 3 (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v4 browser CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Brand theme: custom colours and fonts taken from the HavenWood logo -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand-green: #0A3622;   /* logo: roof, chair, "Haven" */
+      --color-brand-wood: #8A5123;    /* logo: plant pot, "Wood" */
+      --color-brand-cream: #FDFBF9;   /* logo background */
+      --color-brand-sand: #F3ECE1;    /* soft section background */
+      --color-brand-ink: #1F2A24;     /* body text */
+      --color-brand-line: #E3DACB;    /* subtle borders */
+      --font-display: "Fraunces", Georgia, serif;
+      --font-sans: "Source Sans 3", system-ui, sans-serif;
+    }
+  </style>
+  <style>
+    /* Visible keyboard focus on every page */
+    :focus-visible { outline: 2px solid #8A5123; outline-offset: 2px; }
+  </style>
+</head>
+<body class="bg-brand-cream font-sans text-lg text-brand-ink antialiased">
+
+  <header class="sticky top-0 z-50 border-b border-brand-line bg-brand-cream">
+    <div class="mx-auto w-[90%] max-w-[1200px] flex items-center justify-between py-3">
+      <a href="index.html" class="shrink-0">
+        <img src="images/logo.png" alt="HavenWood Furniture - Better Spaces. Happier Lives." width="1254" height="876" class="h-16 w-auto sm:h-20">
+      </a>
+
+      <nav aria-label="Main navigation" class="hidden lg:block">
+        <ul class="flex items-center gap-8 text-base font-semibold">
+          <li><a href="index.html" aria-current="page" class="border-b-2 border-brand-wood pb-1 text-brand-wood">Home</a></li>
+          <li><a href="about.html" class="pb-1 text-brand-green transition-colors hover:text-brand-wood">About</a></li>
+          <li><a href="products.html" class="pb-1 text-brand-green transition-colors hover:text-brand-wood">Products</a></li>
+          <li><a href="categories.html" class="pb-1 text-brand-green transition-colors hover:text-brand-wood">Categories</a></li>
+          <li><a href="gallery.html" class="pb-1 text-brand-green transition-colors hover:text-brand-wood">Gallery</a></li>
+          <li><a href="contact.html" class="pb-1 text-brand-green transition-colors hover:text-brand-wood">Contact</a></li>
+          </ul>
+      </nav>
+
+      <a href="contact.html" class="hidden lg:inline-block rounded-md bg-brand-green px-6 py-3 text-base font-bold text-white transition-colors hover:bg-brand-wood">Get a quote</a>
+
+      <button id="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"
+              class="rounded-md border border-brand-line p-2 text-brand-green lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" aria-label="Mobile navigation" class="hidden border-t border-brand-line lg:hidden">
+      <ul class="mx-auto w-[90%] max-w-[1200px] py-2 text-base font-semibold">
+        <li><a href="index.html" aria-current="page" class="block border-b border-brand-line py-3 text-brand-wood">Home</a></li>
+        <li><a href="about.html" class="block border-b border-brand-line py-3 text-brand-green hover:text-brand-wood">About</a></li>
+        <li><a href="products.html" class="block border-b border-brand-line py-3 text-brand-green hover:text-brand-wood">Products</a></li>
+        <li><a href="categories.html" class="block border-b border-brand-line py-3 text-brand-green hover:text-brand-wood">Categories</a></li>
+        <li><a href="gallery.html" class="block border-b border-brand-line py-3 text-brand-green hover:text-brand-wood">Gallery</a></li>
+        <li><a href="contact.html" class="block border-b border-brand-line py-3 text-brand-green hover:text-brand-wood">Contact</a></li>
+        <li class="py-4"><a href="contact.html" class="block text-center rounded-md bg-brand-green px-6 py-3 text-base font-bold text-white transition-colors hover:bg-brand-wood">Get a quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section>
+      <div class="mx-auto w-[90%] max-w-[1200px] grid items-center gap-10 py-12 md:py-16 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <h1 class="font-display text-4xl font-bold leading-tight text-brand-green sm:text-5xl lg:text-6xl">Furniture that turns a house into a home.</h1>
+          <p class="mt-6 max-w-lg text-lg text-gray-600">Solid, well-made pieces for the living room, bedroom, dining room and office. Built to last and delivered across Nairobi.</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="products.html" class="inline-block rounded-md bg-brand-green px-6 py-3 text-base font-bold text-white transition-colors hover:bg-brand-wood">Shop furniture</a>
+            <a href="contact.html" class="inline-block rounded-md border border-brand-green px-6 py-3 text-base font-bold text-brand-green transition-colors hover:bg-brand-green hover:text-white">Visit the showroom</a>
+          </div>
+        </div>
+        <img src="images/Hero.jpg" alt="A green sofa, hanging lamp and large plant in a bright living room" width="1200" height="800" class="h-auto w-full rounded-lg">
+      </div>
+    </section>
+
+    <!-- Quality points -->
+    <section class="border-y border-brand-line">
+      <div class="mx-auto w-[90%] max-w-[1200px] grid divide-y divide-brand-line md:grid-cols-3 md:divide-x md:divide-y-0">
+        <div class="py-8 md:pr-8">
+          <h2 class="font-display text-xl font-bold text-brand-green">Solid wood construction</h2>
+          <p class="mt-2 text-base text-gray-600">Hardwood frames and joints that stay firm for years.</p>
+        </div>
+        <div class="py-8 md:px-8">
+          <h2 class="font-display text-xl font-bold text-brand-green">Two-year warranty</h2>
+          <p class="mt-2 text-base text-gray-600">If something fails through normal use, we repair or replace it.</p>
+        </div>
+        <div class="py-8 md:pl-8">
+          <h2 class="font-display text-xl font-bold text-brand-green">Made to your size</h2>
+          <p class="mt-2 text-base text-gray-600">Tell us the space and we will adjust sizes and finishes to fit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome -->
+    <section>
+      <div class="mx-auto w-[90%] max-w-[1200px] grid items-center gap-10 py-16 md:py-24 lg:grid-cols-2 lg:gap-16">
+        <img src="images/Welcome section.jpg" alt="HavenWood showroom with a bookshelf, armchair and plant" width="1200" height="800" loading="lazy" class="h-auto w-full rounded-lg lg:order-2">
+        <div class="lg:order-1">
+          <h2 class="font-display text-3xl font-bold text-brand-green md:text-4xl">Welcome to HavenWood</h2>
+          <p class="mt-6 text-gray-600">HavenWood Furniture makes comfortable, honest furniture for Kenyan homes and workplaces. We choose strong materials, keep our designs simple, and price our pieces fairly.</p>
+          <p class="mt-4 text-gray-600">Whether you are furnishing a first apartment or a full family home, our team will help you choose pieces that suit your space and your budget.</p>
+          <a href="about.html" class="mt-8 inline-block rounded-md border border-brand-green px-6 py-3 text-base font-bold text-brand-green transition-colors hover:bg-brand-green hover:text-white">Read our story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured furniture -->
+    <section class="bg-brand-sand">
+      <div class="mx-auto w-[90%] max-w-[1200px] py-16 md:py-24">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <h2 class="font-display text-3xl font-bold text-brand-green md:text-4xl">Featured furniture</h2>
+          <a href="products.html" class="text-base font-bold text-brand-wood hover:underline">View all products</a>
+        </div>
+        <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <article class="flex flex-col overflow-hidden rounded-lg border border-brand-line bg-white shadow-md">
+          <img src="images/Featured card 1.jpg" alt="Haven Armchair" width="800" height="600" loading="lazy" class="aspect-[4/3] w-full object-cover">
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="font-display text-xl font-bold text-brand-green">Haven Armchair</h3>
+            <p class="mt-2 flex-1 text-base text-gray-600">A deep, supportive armchair with a solid hardwood frame and a soft green fabric seat.</p>
+            <div class="mt-6 flex items-center justify-between">
+              <p class="text-lg font-bold text-brand-wood">KSh 24,500</p>
+              <a href="contact.html" class="rounded-md border border-brand-green px-4 py-2 text-sm font-bold text-brand-green transition-colors hover:bg-brand-green hover:text-white">Enquire</a>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col overflow-hidden rounded-lg border border-brand-line bg-white shadow-md">
+          <img src="images/Heritage Sofa.jpg" alt="Heritage 3-Seater Sofa" width="800" height="600" loading="lazy" class="aspect-[4/3] w-full object-cover">
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="font-display text-xl font-bold text-brand-green">Heritage 3-Seater Sofa</h3>
+            <p class="mt-2 flex-1 text-base text-gray-600">Generous cushions, strong arms and removable covers that are easy to clean.</p>
+            <div class="mt-6 flex items-center justify-between">
+              <p class="text-lg font-bold text-brand-wood">KSh 85,000</p>
+              <a href="contact.html" class="rounded-md border border-brand-green px-4 py-2 text-sm font-bold text-brand-green transition-colors hover:bg-brand-green hover:text-white">Enquire</a>
+            </div>
+          </div>
+        </article>
+        <article class="flex flex-col overflow-hidden rounded-lg border border-brand-line bg-white shadow-md">
+          <img src="images/Mvule Dining Table.jfif" alt="Mvule Dining Table" width="800" height="600" loading="lazy" class="aspect-[4/3] w-full object-cover">
+          <div class="flex flex-1 flex-col p-6">
+            <h3 class="font-display text-xl font-bold text-brand-green">Mvule Dining Table</h3>
+            <p class="mt-2 flex-1 text-base text-gray-600">A six-seater table in solid hardwood with a smooth, hard-wearing finish.</p>
+            <div class="mt-6 flex items-center justify-between">
+              <p class="text-lg font-bold text-brand-wood">KSh 68,000</p>
+              <a href="contact.html" class="rounded-md border border-brand-green px-4 py-2 text-sm font-bold text-brand-green transition-colors hover:bg-brand-green hover:text-white">Enquire</a>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promotions -->
+    <section class="bg-brand-green text-white">
+      <div class="mx-auto w-[90%] max-w-[1200px] grid gap-12 py-16 md:grid-cols-2 md:py-20">
+        <div>
+          <h2 class="font-display text-3xl font-bold">Free delivery in Nairobi</h2>
+          <p class="mt-4 max-w-md text-white/80">Orders above KSh 50,000 are delivered and placed in your room at no extra charge.</p>
+          <a href="contact.html" class="mt-6 inline-block text-base font-bold underline underline-offset-4 hover:text-white/80">Ask about delivery</a>
+        </div>
+        <div class="md:border-l md:border-white/20 md:pl-12">
+          <h2 class="font-display text-3xl font-bold">10% off bedroom sets</h2>
+          <p class="mt-4 max-w-md text-white/80">Buy a bed and wardrobe together before 31 December 2026 and save 10%.</p>
+          <a href="categories.html" class="mt-6 inline-block text-base font-bold underline underline-offset-4 hover:text-white/80">Browse bedroom furniture</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-brand-green text-base text-white/80">
+    <div class="mx-auto w-[90%] max-w-[1200px] grid gap-10 py-14 md:grid-cols-3">
+      <div>
+        <p class="font-display text-2xl font-bold text-white">HavenWood Furniture</p>
+        <p class="mt-2 text-white">Better Spaces. Happier Lives.</p>
+        <p class="mt-4 max-w-xs">Well-made furniture for living rooms, bedrooms, dining rooms and offices.</p>
+      </div>
+      <div>
+        <h2 class="font-display text-lg font-bold text-white">Explore</h2>
+        <ul class="mt-4 space-y-2">
+          <li><a href="index.html" class="hover:text-white hover:underline">Home</a></li>
+          <li><a href="about.html" class="hover:text-white hover:underline">About</a></li>
+          <li><a href="products.html" class="hover:text-white hover:underline">Products</a></li>
+          <li><a href="categories.html" class="hover:text-white hover:underline">Categories</a></li>
+          <li><a href="gallery.html" class="hover:text-white hover:underline">Gallery</a></li>
+          <li><a href="contact.html" class="hover:text-white hover:underline">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="font-display text-lg font-bold text-white">Visit us</h2>
+        <address class="mt-4 space-y-2 not-italic">
+          <p>Ngong Road, Nairobi, Kenya</p>
+          <p><a href="tel:+254700000000" class="hover:text-white hover:underline">+254 700 000 000</a></p>
+          <p><a href="mailto:info@havenwood.co.ke" class="hover:text-white hover:underline">info@havenwood.co.ke</a></p>
+          <p>Mon - Sat: 8:30 am - 6:00 pm</p>
+        </address>
+      </div>
+    </div>
+    <div class="border-t border-white/15">
+      <p class="mx-auto w-[90%] max-w-[1200px] py-5 text-sm">&copy; 2026 HavenWood Furniture. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu: show or hide the menu when the button is clicked
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuButton.addEventListener("click", () => {
+      const isHidden = mobileMenu.classList.toggle("hidden");
+      menuButton.setAttribute("aria-expanded", String(!isHidden));
+      menuButton.setAttribute("aria-label", isHidden ? "Open menu" : "Close menu");
+    });
+  </script>
+</body>
+</html>
